@@ -27,6 +27,48 @@ class LeanGemminiRocketConfig extends Config(
   new chipyard.config.WithSystemBusWidth(128) ++
   new chipyard.config.AbstractConfig)
 
+class DummyGemminiRocketConfig extends Config(
+  new gemmini.DummyGemminiConfig ++                                 // use Dummy Gemmini systolic array GEMM accelerator
+  new freechips.rocketchip.subsystem.WithNBigCores(1) ++
+  new chipyard.config.WithSystemBusWidth(128) ++
+  new chipyard.config.AbstractConfig)
+
+class Dummy2GemminiRocketConfig extends Config(
+  new gemmini.Dummy2GemminiConfig ++                                 // use Dummy Gemmini systolic array GEMM accelerator
+  new freechips.rocketchip.subsystem.WithNBigCores(1) ++
+  new chipyard.config.WithSystemBusWidth(128) ++
+  new chipyard.config.AbstractConfig)
+
+class Dummy4GemminiRocketConfig extends Config(
+  new gemmini.Dummy4GemminiConfig ++                                 // use Dummy Gemmini systolic array GEMM accelerator
+  new freechips.rocketchip.subsystem.WithNBigCores(1) ++
+  new chipyard.config.WithSystemBusWidth(128) ++
+  new chipyard.config.AbstractConfig)
+
+class Dummy8GemminiRocketConfig extends Config(
+  new gemmini.Dummy8GemminiConfig ++                                 // use Dummy Gemmini systolic array GEMM accelerator
+  new freechips.rocketchip.subsystem.WithNBigCores(1) ++
+  new chipyard.config.WithSystemBusWidth(128) ++
+  new chipyard.config.AbstractConfig)
+
+class Dummy16GemminiRocketConfig extends Config(
+  new gemmini.Dummy16GemminiConfig ++                                 // use Dummy Gemmini systolic array GEMM accelerator
+  new freechips.rocketchip.subsystem.WithNBigCores(1) ++
+  new chipyard.config.WithSystemBusWidth(128) ++
+  new chipyard.config.AbstractConfig)
+
+class Dummy32GemminiRocketConfig extends Config(
+  new gemmini.Dummy32GemminiConfig ++                                 // use Dummy Gemmini systolic array GEMM accelerator
+  new freechips.rocketchip.subsystem.WithNBigCores(1) ++
+  new chipyard.config.WithSystemBusWidth(128) ++
+  new chipyard.config.AbstractConfig)
+
+class Dummy64GemminiRocketConfig extends Config(
+  new gemmini.Dummy64GemminiConfig ++                                 // use Dummy Gemmini systolic array GEMM accelerator
+  new freechips.rocketchip.subsystem.WithNBigCores(1) ++
+  new chipyard.config.WithSystemBusWidth(128) ++
+  new chipyard.config.AbstractConfig)
+
 class HwachaRocketConfig extends Config(
   new chipyard.config.WithHwachaTest ++
   new hwacha.DefaultHwachaConfig ++                              // use Hwacha vector accelerator
